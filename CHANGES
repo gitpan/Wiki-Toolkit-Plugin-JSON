@@ -1,3 +1,8 @@
+2008-10-24: 0.02
+            * Fix URL below
+            * Update copyright
+            * Add minimal test suite with use_ok
+
 2008-10-18: 0.01
             * Initial release, taken from 
-              http://dev.openguides.org/attachment/ticket/154
+              http://dev.openguides.org/attachment/ticket/154/

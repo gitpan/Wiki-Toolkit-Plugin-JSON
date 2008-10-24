@@ -4,4 +4,5 @@ lib/Wiki/Toolkit/Plugin/JSON.pm
 MANIFEST
 Makefile.PL
 META.yml
+t/001_load.t
 SIGNATURE    Added here by Module::Build

@@ -3,7 +3,7 @@ package Wiki::Toolkit::Plugin::JSON;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 use POSIX 'strftime';
 use Time::Piece;
@@ -304,6 +304,8 @@ Earle Martin <EMARTIN@cpan.org>. Originally by Kake Pugh <kake@earth.li>.
 
 Copyright 2003-4 Kake Pugh. Subsequent modifications copyright 2005 
 Earle Martin.
+
+Copyright 2008 the Wiki::Toolkit team
 
 This module is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
