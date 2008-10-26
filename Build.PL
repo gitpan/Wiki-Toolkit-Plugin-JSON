@@ -8,7 +8,8 @@ Module::Build->new(
   module_name  => 'Wiki::Toolkit::Plugin::JSON',
   requires     => {
                     'JSON' => 0,
-#                    'JSON::Syck' => 0,
+                    'Time::Piece' => 0,
+                    'URI::Escape' => 0,
                   },
   license      => 'perl',
   sign => 1,
