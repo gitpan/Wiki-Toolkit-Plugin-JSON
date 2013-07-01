@@ -1,3 +1,7 @@
+??????????: 0.04
+            * Don't attempt to use JSON::Syck any more - JSON now uses
+              JSON::XS where possible, so just use that.
+
 2008-10-26: 0.03
             * Add missing prerequisites
 

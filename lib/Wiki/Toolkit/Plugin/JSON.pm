@@ -3,29 +3,13 @@ package Wiki::Toolkit::Plugin::JSON;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = '0.03';
+$VERSION = '0.04';
 
+use JSON;
 use POSIX 'strftime';
 use Time::Piece;
 use URI::Escape;
 use Carp qw( croak );
-
-BEGIN {
-    require constant;
-    eval {
-        require JSON::Syck;
-        JSON::Syck->import();
-    };
-
-    unless ($@) {
-        constant->import( JSON_SYCK => 1 );
-    }
-    else {
-        eval { require JSON; JSON->import() };
-        die "Couldn't find a JSON Package, install JSON::Syck or JSON" if $@;
-        constant->import( JSON_SYCK => 0 );
-    }
-}
 
 sub new {
     my $class = shift;
@@ -109,7 +93,7 @@ sub recent_changes {
               $self->{make_history_url}->( $change->{name} );
         }
 
-        my $change->{node_url} = $self->{make_node_url}->( $change->{name} );
+        $change->{node_url} = $self->{make_node_url}->( $change->{name} );
 
         my $rdf_url = $change->{node_url};
         $rdf_url =~ s/\?/\?id=/;
@@ -128,12 +112,7 @@ sub recent_changes {
 
 sub make_json {
     my ( $self, $data ) = @_;
-    if (JSON_SYCK) {
-        return JSON::Syck::Dump($data);
-    }
-    else {
-        return JSON::objToJson($data);
-    }
+    return JSON::to_json( $data );
 }
 
 1;

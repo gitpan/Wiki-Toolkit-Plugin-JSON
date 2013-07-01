@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.55.
+signed via the Module::Signature module, version 0.68.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -15,16 +15,20 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 ea2e6812366c47c5312b6672033b2d84c3b3ffff Build.PL
-SHA1 ac82cfd56d01c843beb99c815a256575d6f1ed5a CHANGES
-SHA1 1ac5f7a9ea07efdbb4ca6296f656ed30979c8bbc MANIFEST
-SHA1 27163ccd34a725233fa6fb811b481008fb4b469f META.yml
+SHA1 a6d740cb957cb2cd237549af4383c74437687c39 CHANGES
+SHA1 26dd4d4a819c9839f53293dad468a037f93f5abb MANIFEST
+SHA1 cfe75f10516e8dbabd53392f4404349802b508e2 META.json
+SHA1 d20526f0d39f49b07ff8ac8986418a56466f5b9b META.yml
 SHA1 9fac6f034ce9889fcc0916351df871264de7b8f8 Makefile.PL
-SHA1 1600febcc1f79ce28e874ac1adeb100a81ec4c50 lib/Wiki/Toolkit/Plugin/JSON.pm
+SHA1 aa6252e966924ba927e13801a06a88dfe05d624e lib/Wiki/Toolkit/Plugin/JSON.pm
 SHA1 ff1b0bda7a7dc4ada8f3ab8189c5a4f0f86a422f t/001_load.t
+SHA1 367c0674729e16892904280a078ae4bdaaf39105 t/002_basic_invocation.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.9 (GNU/Linux)
+Version: GnuPG v1.4.12 (GNU/Linux)
 
-iD8DBQFJBELbYzuFKFF44qURAqqtAKDO7h4mMAeX4DDb3azUPyQUkbtoUACeLwz8
-pKEHR1uPh9/eBbnQZY+s014=
-=UScx
+iJwEAQECAAYFAlHR5nAACgkQivyhN+Jvqw0nQgQAlIyeWjP30i7IzeZlfR4xGxeI
+Ea8oEdAmHvfmY0MAjqwWFR1Qp1uvMvBusLEN7O1U/p2NazJlgdzhsabZiSYEyuK7
+68bVnq8HsWqVKvyk3EqIs2EkfQPqFk1EyZVLDCO9o+8fYYdZjJdJIKo8vDibe42a
+ZwBN3btrY1VYsx3EE+M=
+=98Jp
 -----END PGP SIGNATURE-----
