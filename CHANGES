@@ -1,4 +1,4 @@
-??????????: 0.04
+2013-07-01 0.04
             * Don't attempt to use JSON::Syck any more - JSON now uses
               JSON::XS where possible, so just use that.
 
