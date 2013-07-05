@@ -3,7 +3,7 @@ package Wiki::Toolkit::Plugin::JSON;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = '0.04';
+$VERSION = '0.05';
 
 use JSON;
 use POSIX 'strftime';

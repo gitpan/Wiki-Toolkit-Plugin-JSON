@@ -20,6 +20,10 @@
          }
       },
       "runtime" : {
+         "recommends" : {
+            "Test::JSON" : 0,
+            "Wiki::Toolkit" : 0
+         },
          "requires" : {
             "JSON" : 0,
             "Time::Piece" : 0,
@@ -30,7 +34,7 @@
    "provides" : {
       "Wiki::Toolkit::Plugin::JSON" : {
          "file" : "lib/Wiki/Toolkit/Plugin/JSON.pm",
-         "version" : "0.04"
+         "version" : "0.05"
       }
    },
    "release_status" : "stable",
@@ -39,5 +43,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.04"
+   "version" : "0.05"
 }

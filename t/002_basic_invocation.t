@@ -2,16 +2,19 @@ use strict;
 use JSON;
 use Test::More;
 use Wiki::Toolkit::Plugin::JSON;
-use Wiki::Toolkit::TestLib;
+#use Wiki::Toolkit::TestLib;
+
+eval "use Wiki::Toolkit::TestLib";
+plan skip_all => "Wiki::Toolkit::TestLib needed to run tests" if $@;
 
 if ( scalar @Wiki::Toolkit::TestLib::wiki_info == 0 ) {
     plan skip_all => "no backends configured";
 } else {
-    plan tests => ( 3 * scalar @Wiki::Toolkit::TestLib::wiki_info );
+    plan tests => ( 4 * scalar @Wiki::Toolkit::TestLib::wiki_info );
 }
- 
+
 my $iterator = Wiki::Toolkit::TestLib->new_wiki_maker;
- 
+
 while ( my $wiki = $iterator->new_wiki ) {
     # Put some test data in, sleeping for at least a second in between each.
     my @nodes = ( "1st Node", "2nd Node", "3rd Node" );
@@ -45,6 +48,14 @@ while ( my $wiki = $iterator->new_wiki ) {
             $json->recent_changes;
     };
     ok( !$@, "->recent_changes() doesn't warn." );
+
+SKIP: {
+        eval "use Test::JSON";
+
+        skip "Test::JSON not installed", 1 if $@;
+
+        is_valid_json( $output, "is well formed json");
+      };
 
     my $parsed = eval {
            local $SIG{__WARN__} = sub { die $_[0]; };

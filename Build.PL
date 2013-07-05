@@ -11,6 +11,10 @@ Module::Build->new(
                     'Time::Piece' => 0,
                     'URI::Escape' => 0,
                   },
+  recommends   => {
+                    'Wiki::Toolkit' => 0,
+                    'Test::JSON' => 0,
+                  },
   license      => 'perl',
   sign => 1,
   dist_abstract => 'A Wiki::Toolkit plugin to output RecentChanges JSON.', 
